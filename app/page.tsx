@@ -8,9 +8,9 @@ type Props = {}
 const page = (props: Props) => {
   return (
     <div>
-      <Navbar/>
-      <NavbarTwo/>
-      <NavbarThree/>
+      <Navbar />
+      {/* <NavbarTwo/> */}
+      <NavbarThree />
     </div>
   )
 }
