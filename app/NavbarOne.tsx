@@ -106,3 +106,15 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+// import React from 'react'
+
+// type Props = {}
+
+// const NavbarOne = (props: Props) => {
+//   return (
+//     <div>NavbarOne</div>
+//   )
+// }
+
+// export default NavbarOne
