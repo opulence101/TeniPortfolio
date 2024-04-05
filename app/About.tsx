@@ -1,11 +1,16 @@
-import React from 'react'
+import React from "react";
+import One from "./Home/One";
+import Four from "./Home/Four";
 
-type Props = {}
+type Props = {};
 
 const About = (props: Props) => {
   return (
-    <div>About</div>
-  )
-}
+    <div>
+      <One />
+      <Four />
+    </div>
+  );
+};
 
-export default About
+export default About;
