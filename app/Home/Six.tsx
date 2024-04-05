@@ -1,15 +1,24 @@
 import { useRef, useState } from 'react'
 
-const FaqsCard = (props: { faqsList: any; idx: any }) => {
-  const answerElRef = useRef()
+const FaqsCard = (props: {
+  faqsList: { q: string; a: string }
+  idx: number
+}) => {
+  const answerElRef = useRef<HTMLDivElement>(null)
   const [state, setState] = useState(false)
   const [answerH, setAnswerH] = useState('0px')
   const { faqsList, idx } = props
 
   const handleOpenAnswer = () => {
-    const answerElH = answerElRef.current.childNodes[0].offsetHeight
-    setState(!state)
-    setAnswerH(`${answerElH + 20}px`)
+    if (
+      answerElRef.current &&
+      answerElRef.current.firstChild instanceof HTMLElement
+    ) {
+      // Check if firstChild is an HTMLElement
+      const answerElH = answerElRef.current.firstChild.offsetHeight // Access offsetHeight from firstChild
+      setState(!state)
+      setAnswerH(`${answerElH + 20}px`)
+    }
   }
 
   return (
@@ -29,9 +38,9 @@ const FaqsCard = (props: { faqsList: any; idx: any }) => {
             stroke='currentColor'
           >
             <path
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              stroke-width='2'
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              strokeWidth={2}
               d='M20 12H4'
             />
           </svg>
@@ -54,8 +63,8 @@ const FaqsCard = (props: { faqsList: any; idx: any }) => {
       </h4>
       <div
         ref={answerElRef}
-        className='duration-300'
-        style={state ? { height: answerH } : { height: '0px' }}
+        className='duration-300 overflow-hidden' // Adjust the class to hide overflow
+        style={{ height: state ? answerH : '0px' }} // Remove unnecessary curly braces
       >
         <div>
           <p className='text-gray-500'>{faqsList.a}</p>
@@ -104,7 +113,7 @@ export default () => {
         </div>
         <div className='flex-1 mt-12 md:mt-0'>
           {faqsList.map((item, idx) => (
-            <FaqsCard idx={idx} faqsList={item} />
+            <FaqsCard key={idx} idx={idx} faqsList={item} /> // Add key prop
           ))}
         </div>
       </div>
