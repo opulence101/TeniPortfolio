@@ -1,5 +1,7 @@
 import { useRef, useState } from 'react'
 
+type Props = {}
+
 const FaqsCard = (props: {
   faqsList: { q: string; a: string }
   idx: number
@@ -74,7 +76,7 @@ const FaqsCard = (props: {
   )
 }
 
-export default () => {
+const Six = (props: Props) => {
   const faqsList = [
     {
       q: 'What are some random questions to ask?',
@@ -120,3 +122,5 @@ export default () => {
     </section>
   )
 }
+
+export default Six
