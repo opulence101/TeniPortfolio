@@ -10,7 +10,7 @@ const page = (props: Props) => {
     <div>
       <Navbar />
       {/* <NavbarTwo/> */}
-      <NavbarThree />
+      {/* <NavbarThree /> */}
     </div>
   )
 }
