@@ -16,9 +16,9 @@ const Home = (props: Props) => {
       <One />
       <Two />
       <Three />
-      <Four />
-      <Five />
       <Six />
+      <Five />
+      <Four />
     </div>
   )
 }
