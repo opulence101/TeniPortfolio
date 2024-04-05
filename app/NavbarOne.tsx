@@ -3,118 +3,113 @@ import React, { useState } from "react";
 import Home from "./Home";
 import About from "./About";
 import Contact from "./Contact";
+import Link from "next/link";
 
-const Navbar = () => {
+type Props = {};
+
+const NavbarOne = (props: Props) => {
+  const [isOpen, setIsOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState("Home");
 
-  const navigateTo = (page: React.SetStateAction<string>) => {
+  const navigateTo = (page: string) => {
     setCurrentPage(page);
+    // Close the menu when a page is selected
+    setIsOpen(false);
   };
 
   return (
-    <>
-      <header className="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white border-b border-gray-200 text-sm py-3 sm:py-0 lg:h-20">
-        <nav
-          className="relative max-w-7xl w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8"
-          aria-label="Global"
-        >
+    <div>
+      <nav className="relative bg-white dark:bg-gray-900">
+        <div className="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
           <div className="flex items-center justify-between">
-            <a
-              className="flex-none text-xl font-semibold"
-              href="#"
-              aria-label="Brand"
-            >
-              TrekTopia
-            </a>
-            <div className="sm:hidden">
+            <Link href="/">
+              <h1 className="flex-none italic text-xl font-semibold">
+                Teni Dev
+              </h1>
+            </Link>
+            <div className="flex md:hidden">
               <button
+                onClick={() => setIsOpen(!isOpen)}
                 type="button"
-                className="hs-collapse-toggle size-9 flex justify-center items-center text-sm font-semibold rounded-lg border border-gray-200 text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none"
-                data-hs-collapse="#navbar-collapse-with-animation"
-                aria-controls="navbar-collapse-with-animation"
-                aria-label="Toggle navigation"
+                className="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400"
+                aria-label="toggle menu"
               >
                 <svg
-                  className="hs-collapse-open:hidden size-4"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
                 >
-                  <path
-                    fillRule="evenodd"
-                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
-                  />
-                </svg>
-                <svg
-                  className="hs-collapse-open:block flex-shrink-0 hidden size-4"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                  {!isOpen ? (
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M4 6h16M4 12h16m-7 6h7"
+                    />
+                  ) : (
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  )}
                 </svg>
               </button>
             </div>
           </div>
           <div
-            id="navbar-collapse-with-animation"
-            className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block"
+            className={`${
+              isOpen ? "block" : "hidden"
+            } md:flex md:items-center md:justify-between`}
           >
-            <div className="flex flex-col gap-y-4 gap-x-0 mt-5 items-start justify-start lg:flex-row lg:items-center lg:justify-end sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:ps-7">
-              <button
-                className={`font-bold ${
+            <div className="flex flex-col md:flex-row md:mx-6">
+              <a
+                className={`my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 ${
                   currentPage === "Home"
-                    ? "text-blue-600"
-                    : "text-gray-500 hover:text-gray-400"
-                }`}
+                    ? "hover:text-blue-500 dark:hover:text-blue-400"
+                    : "hover:text-gray-600 dark:hover:text-gray-300"
+                } md:mx-4 md:my-0`}
+                href="#"
                 onClick={() => navigateTo("Home")}
               >
                 Home
-              </button>
-              <button
-                className={`font-bold ${
+              </a>
+              <a
+                className={`my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 ${
                   currentPage === "About"
-                    ? "text-blue-600"
-                    : "text-gray-500 hover:text-gray-400"
-                }`}
+                    ? "hover:text-blue-500 dark:hover:text-blue-400"
+                    : "hover:text-gray-600 dark:hover:text-gray-300"
+                } md:mx-4 md:my-0`}
+                href="#"
                 onClick={() => navigateTo("About")}
               >
                 About
-              </button>
-              <button
-                className={`font-bold ${
+              </a>
+              <a
+                className={`my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 ${
                   currentPage === "Contact"
-                    ? "text-blue-600"
-                    : "text-gray-500 hover:text-gray-400"
-                }`}
+                    ? "hover:text-blue-500 dark:hover:text-blue-400"
+                    : "hover:text-gray-600 dark:hover:text-gray-300"
+                } md:mx-4 md:my-0`}
+                href="#"
                 onClick={() => navigateTo("Contact")}
               >
                 Contact
-              </button>
+              </a>
             </div>
           </div>
-        </nav>
-      </header>
+          <hr />
+        </div>
+      </nav>
       {/* Render content based on currentPage state */}
       {currentPage === "Home" && <Home />}
       {currentPage === "About" && <About />}
       {currentPage === "Contact" && <Contact />}
-    </>
+    </div>
   );
 };
 
-export default Navbar;
-
-// import React from 'react'
-
-// type Props = {}
-
-// const NavbarOne = (props: Props) => {
-//   return (
-//     <div>NavbarOne</div>
-//   )
-// }
-
-// export default NavbarOne
+export default NavbarOne;
