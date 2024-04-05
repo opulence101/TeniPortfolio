@@ -81,12 +81,12 @@ const Two = (props: Props) => {
               </svg>
             </div>
             <div className="mt-3">
-              <h3 className="text-sm sm:text-lg font-semibold text-gray-800 dark:text-gray-200">
+              <h3 className="text-sm sm:text-lg font-semibold text-gray-800">
                 Next.js
               </h3>
             </div>
           </div>
-          <div className="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-gray-700">
+          <div className="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5">
             <div className="flex justify-center items-center size-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-lg mx-auto">
               <svg
                 data-testid="geist-icon"
@@ -112,12 +112,12 @@ const Two = (props: Props) => {
               </svg>
             </div>
             <div className="mt-3">
-              <h3 className="text-sm sm:text-lg font-semibold text-gray-800 dark:text-gray-200">
+              <h3 className="text-sm sm:text-lg font-semibold text-gray-800">
                 React.js
               </h3>
             </div>
           </div>
-          <div className="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-gray-700">
+          <div className="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 ">
             <div className="flex justify-center items-center size-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-lg mx-auto">
               <svg
                 data-testid="geist-icon"
@@ -137,12 +137,12 @@ const Two = (props: Props) => {
             </div>
 
             <div className="mt-3">
-              <h3 className="text-sm sm:text-lg font-semibold text-gray-800 dark:text-gray-200">
+              <h3 className="text-sm sm:text-lg font-semibold text-gray-800">
                 Vercel
               </h3>
             </div>
           </div>
-          <div className="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-gray-700">
+          <div className="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5">
             <div className="flex justify-center items-center size-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-lg mx-auto">
               <svg
                 id="Html_5_24"
@@ -242,12 +242,12 @@ const Two = (props: Props) => {
               </svg>
             </div>
             <div className="mt-3">
-              <h3 className="text-sm sm:text-lg font-semibold text-gray-800 dark:text-gray-200">
+              <h3 className="text-sm sm:text-lg font-semibold text-gray-800">
                 HTML
               </h3>
             </div>
           </div>
-          <div className="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-gray-700">
+          <div className="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5">
             <div className="flex justify-center items-center size-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-lg mx-auto">
               <svg
                 id="Tailwindcss_24"
@@ -287,12 +287,12 @@ const Two = (props: Props) => {
               </svg>
             </div>
             <div className="mt-3">
-              <h3 className="text-sm sm:text-lg font-semibold text-gray-800 dark:text-gray-200">
+              <h3 className="text-sm sm:text-lg font-semibold text-gray-800">
                 TailwindCSS
               </h3>
             </div>
           </div>
-          <div className="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-gray-700">
+          <div className="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5">
             <div className="flex justify-center items-center size-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-lg mx-auto">
               <svg
                 id="Redux_24"
@@ -374,12 +374,12 @@ const Two = (props: Props) => {
               </svg>
             </div>
             <div className="mt-3">
-              <h3 className="text-sm sm:text-lg font-semibold text-gray-800 dark:text-gray-200">
+              <h3 className="text-sm sm:text-lg font-semibold text-gray-800">
                 Redux
               </h3>
             </div>
           </div>
-          <div className="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-gray-700">
+          <div className="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5">
             <div className="flex justify-center items-center size-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-lg mx-auto">
               <svg
                 id="API_24"
@@ -442,12 +442,12 @@ const Two = (props: Props) => {
               </svg>
             </div>
             <div className="mt-3">
-              <h3 className="text-sm sm:text-lg font-semibold text-gray-800 dark:text-gray-200">
+              <h3 className="text-sm sm:text-lg font-semibold text-gray-800">
                 API
               </h3>
             </div>
           </div>
-          <div className="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5 dark:border-gray-700">
+          <div className="h-36 sm:h-56 flex flex-col justify-center border border-gray-200 rounded-xl text-center p-4 md:p-5">
             <div className="flex justify-center items-center size-12 bg-gradient-to-br from-blue-600 to-violet-600 rounded-lg mx-auto">
               <svg
                 id="Vite_24"
@@ -556,7 +556,7 @@ const Two = (props: Props) => {
               </svg>
             </div>
             <div className="mt-3">
-              <h3 className="text-sm sm:text-lg font-semibold text-gray-800 dark:text-gray-200">
+              <h3 className="text-sm sm:text-lg font-semibold text-gray-800">
                 Vite
               </h3>
             </div>
