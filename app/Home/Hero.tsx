@@ -50,8 +50,8 @@ const Hero = (props: Props) => {
         </div>
         <div className="relative lg:w-1/2">
           <img
-            className="object-cover w-full h-56 rounded shadow-lg sm:h-96"
-            src="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
+            className="object-cover lg:w-[34rem] w-[26rem] rounded shadow-lg "
+            src="https://i.ibb.co/YdfG696/Snapchat-258389110-1.jpg"
             alt=""
           />
         </div>

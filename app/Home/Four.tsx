@@ -40,7 +40,7 @@ const Four = (props: Props) => {
               title="Our phone"
               className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
             >
-              850-123-5021
+              +234 912 102 2093
             </a>
           </div>
           <div className="flex">
@@ -51,7 +51,7 @@ const Four = (props: Props) => {
               title="Our email"
               className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
             >
-              info@lorem.mail
+              abdulbasitonasanya7@gmail.com
             </a>
           </div>
           <div className="flex">
@@ -64,7 +64,7 @@ const Four = (props: Props) => {
               title="Our address"
               className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
             >
-              312 Lovely Street, NY
+              Lagos, Nigeria.
             </a>
           </div>
         </div>
